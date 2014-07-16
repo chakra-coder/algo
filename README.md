@@ -18,6 +18,7 @@ algo
 
     - CakeTuneProblem: 单手翻转烙饼问题，详见编程之美，基本思想：遍历搜索树+有界剪枝
     - SearchInSortedMatrix: 在有序的N*N矩阵中，查找给定数字
+    - FindAllPathsInMatrix: 找出从矩阵第一行第一列到最后一行最后一列的所有路径。基本思想：动态规划
     
 + 排序相关：
 

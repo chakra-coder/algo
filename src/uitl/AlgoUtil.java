@@ -1,5 +1,7 @@
 package uitl;
 
+import java.util.List;
+
 /**
  * 一些常用的工具函数
  * 
@@ -14,6 +16,23 @@ public class AlgoUtil
          for(int i=0; i< b.length; i++)
          {
              System.out.print(b[i] + (i%10 == 9 ? "\n":"\t"));
+         }
+         System.out.println();
+    }
+    
+    public static void printList(List l)
+    {
+         for(int i=0; i< l.size(); i++)
+         {
+        	 Object o = l.get(i);
+        	 if(o instanceof List)
+        	 {
+        		 printList((List) o); 
+        	 }
+        	 else
+        	 {
+                 System.out.print(o + (i%10 == 9 ? "\n":"\t"));
+        	 }
          }
          System.out.println();
     }
