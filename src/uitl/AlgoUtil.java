@@ -1,14 +1,14 @@
 package uitl;
 
 /**
- * 一些常用的工具函数
+ * 涓�浜涘父鐢ㄧ殑宸ュ叿鍑芥暟
  * 
  * @author rayeaster
  *
  */
 public class AlgoUtil 
 {    
-    // 打印函数
+	// 鎵撳嵃鍑芥暟
     public static void print(int b[])
     {
          for(int i=0; i< b.length; i++)

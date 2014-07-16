@@ -3,32 +3,30 @@ package sorting;
 import uitl.AlgoUtil;
 
 /**
- * �ϲ�������������
+ * 合并两个有序数组
  * Solution 1 :
- *  �½�һ������Ȼ��һ����������š��临�Ӷ�Ϊa+b
+ *  新建一个数组然后一个个往里面放。其复杂度为a+b
  * Solution 2 :
- *   ��B���ö��ַ�ѡȡ���������Ԫ�ؿ飬ֱ�Ӳ�������Ԫ�أ�
+ *   从B中用二分法选取插入的连续元素块，直接插入数个元素，
  *   
- *   ��ʼֵx=0;b[x]Ӧ���뵽a[cur]��λ��(���ַ��õ�λ�ã���   
- *   ��ôֱ��b�����һ��С��a[cur+1]��Ԫ��b[y](���ַ��õ�y)��y-x����
- *   ��Ӧ���β��뵽��ǰa[cur]��λ�ã�
+ *   初始值x=0;b[x]应插入到a[cur]的位置(二分法得到位置），   
+ *   那么直到b中最后一个小于a[cur+1]的元素b[y](二分法得到y)共y-x个，
+ *   都应依次插入到当前a[cur]的位置，
  *   
- *   ��a[cur+1]��ʼʣ���Ԫ�أ���Ӧ����ƶ�y-x��λ�á�
- *   ��ɺ���b[y]֮ǰ��Ԫ�ض��Ѿ����롣
+ *   从a[cur+1]开始剩余的元素，都应向后移动y-x个位置。
+ *   完成后则b[y]之前的元素都已经插入。
  *   
- *   Ȼ��x��Ϊy+1,�ظ����ϲ�����ֱ������b��Ԫ�ض�����a��
+ *   然后x置为y+1,重复以上操作，直至所有b中元素都插入a中
  *   
- *   ���ֲ���ʱ��λ�ü������ƣ������ֲ��������λ�ÿ�ʼ�������ֽ����˲��ָ��Ӷ�
- *   ���Ӷȴ���Ϊlog2(a)+log2(b). ���ʱ�ȽϺ��ƶ���a+b��
+ *   二分查找时对位置加以限制，从上轮插入结束的位置开始，这样又降低了部分复杂度
+ *   复杂度大致为log2(a)+log2(b). 最差时比较和移动了a+b次
  * 
  * @author rayeaster
  *
  */
 
 public class Combine2SortedArray 
-{
-	
-	//������������ĺϲ�����,��ǰ����Ҳ���ԴӺ���ǰ
+{	
     public static int[] MergeList1(int a[],int b[])
     {
         int result[];  

@@ -1,7 +1,7 @@
 package search;
 
 /**
- *  ÔÚÓĞĞòµÄN*N¾ØÕóÖĞ£¬²éÕÒ¸ø¶¨Êı×Ö¡£
+ *  åœ¨æœ‰åºçš„N*NçŸ©é˜µä¸­ï¼ŒæŸ¥æ‰¾ç»™å®šæ•°å­—ã€‚
  *  
  * 	n-n matrix (each column is increasing from top to bottom, same with every row from left to right),
  *  find a number using O(n) complexity, 
@@ -14,7 +14,7 @@ package search;
 public class SearchInSortedMatrix{
 	
 	public static void main(String[] args){
-		String val = "abÎÒ¿´abc";
+		String val = "abæˆ‘çœ‹abc";
 		char[] arr = val.toCharArray();
         int[][] a = 
         {

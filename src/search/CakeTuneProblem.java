@@ -1,21 +1,21 @@
 package search;
 
 /**
- * µ¥ÊÖ·­×ªÀÓ±ýÎÊÌâ£¬Ïê¼û±à³ÌÖ®ÃÀ
- * »ù±¾Ë¼Ïë£º±éÀúËÑË÷Ê÷+ÓÐ½ç¼ôÖ¦
+ * å•æ‰‹ç¿»è½¬çƒ™é¥¼é—®é¢˜ï¼Œè¯¦è§ç¼–ç¨‹ä¹‹ç¾Ž
+ * åŸºæœ¬æ€æƒ³ï¼šéåŽ†æœç´¢æ ‘+æœ‰ç•Œå‰ªæž
  * 
  * @author rayeaster
  *
  */
 public class CakeTuneProblem {
     
-    int[] m_cakeArray; // ÀÓ±ýÐÅÏ¢Êý×é
-    int m_nCakeCnt;    // ÀÓ±ý¸öÊý
-    int m_nMaxSwap;    // ×î¶à½»»»´ÎÊý,×î¶àÎª2*(m_nCakeCnt-1)
-    int[] m_swapArray; // ½»»»½á¹ûÊý×é
-    int[] m_reverseCakeArray; // µ±Ç°·­×ªÀÓ±ýÐÅÏ¢Êý×é
-    int[] m_reverseCakeArraySwap; // µ±Ç°·­×ªÀÓ±ý½»»»ÐÅÏ¢Êý×é
-    int m_nSearch; //µ±Ç°ËÑË÷´ÎÊýÐÅÏ¢
+	int[] m_cakeArray; // çƒ™é¥¼ä¿¡æ¯æ•°ç»„
+	int m_nCakeCnt;    // çƒ™é¥¼ä¸ªæ•°
+	int m_nMaxSwap;    // æœ€å¤šäº¤æ¢æ¬¡æ•°,æœ€å¤šä¸º2*(m_nCakeCnt-1)
+	int[] m_swapArray; // äº¤æ¢ç»“æžœæ•°ç»„
+	int[] m_reverseCakeArray; // å½“å‰ç¿»è½¬çƒ™é¥¼ä¿¡æ¯æ•°ç»„
+	int[] m_reverseCakeArraySwap; // å½“å‰ç¿»è½¬çƒ™é¥¼äº¤æ¢ä¿¡æ¯æ•°ç»„
+	int m_nSearch; //å½“å‰æœç´¢æ¬¡æ•°ä¿¡æ¯
     
     public CakeTuneProblem(){
         m_nCakeCnt = 0;
@@ -85,7 +85,7 @@ public class CakeTuneProblem {
         int i, nEstimate;
         m_nSearch++;
         
-        //¼ôÖ¦Ìõ¼þ
+        //prune condition
         nEstimate = lowerBound(m_reverseCakeArray);
         if( step + nEstimate > m_nMaxSwap || step >= m_nMaxSwap)
             return;

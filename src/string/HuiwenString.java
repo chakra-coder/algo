@@ -4,11 +4,11 @@ import java.util.Arrays;
 
 
 /**
- * ×î³¤»ØÎÄ×Ö´®
+ * æœ€é•¿å›æ–‡å­—ä¸²
  * 
- * ·µ»Ø¸ø¶¨×Ö·û´®µÄ×î³¤»ØÎÄ×Ö´®, manacherËã·¨£¬²ÉÓÃ¶¯Ì¬¹æ»®Ë¼Ïë
- * Ã¿´Î¸ù¾İµ±Ç°¼ì²éµÄ×Ö·ûarray[i]µÄ»ØÎÄ°ë¾¶radius[i]£¬
- * ¾ö¶¨×î¶àµ½ºóĞø×Ö·û[i+1, radius[i] + i]·¶Î§µÄĞÂ»ØÎÄ°ë¾¶
+ * è¿”å›ç»™å®šå­—ç¬¦ä¸²çš„æœ€é•¿å›æ–‡å­—ä¸², manacherç®—æ³•ï¼Œé‡‡ç”¨åŠ¨æ€è§„åˆ’æ€æƒ³
+ * æ¯æ¬¡æ ¹æ®å½“å‰æ£€æŸ¥çš„å­—ç¬¦array[i]çš„å›æ–‡åŠå¾„radius[i]ï¼Œ
+ * å†³å®šæœ€å¤šåˆ°åç»­å­—ç¬¦[i+1, radius[i] + i]èŒƒå›´çš„æ–°å›æ–‡åŠå¾„
  * 
  * @author rayeaster
  *
@@ -17,7 +17,7 @@ public class HuiwenString
 {
 	
 	/** 
-     * ·µ»ØÀıÈç #a#c#b#c#a#a#c#b#c#d#ĞÎÊ½µÄ×Ö·û´®Êı×é 
+     * è¿”å›ä¾‹å¦‚ #a#c#b#c#a#a#c#b#c#d#å½¢å¼çš„å­—ç¬¦ä¸²æ•°ç»„
      *  
      * @param s 
      * @return 
@@ -48,11 +48,11 @@ public class HuiwenString
   
         int i = 1, j = 0;  //i starts from 1
   
-        // ¼ÇÂ¼×î³¤µÄ»ØÎÄ´®µÄ³¤¶È  
+        // è®°å½•æœ€é•¿çš„å›æ–‡ä¸²çš„é•¿åº¦  
         int maxLen = 0;  
         while (i < s.length)  
         {  
-            // É¨ÃèµÃ³öradÖµ  
+        	// æ‰«æå¾—å‡ºradå€¼   
             while (i - j - 1 > -1 
             	   && i + j + 1 < s.length  
                    && s[i - j - 1] == s[i + j + 1])  
@@ -76,7 +76,7 @@ public class HuiwenString
         }  
   
         System.out.println(Arrays.toString(rad));  
-        System.out.println("×î³¤»ØÎÄ´®³¤¶È£º " + maxLen);  
+        System.out.println("æœ€é•¿å›æ–‡ä¸²é•¿åº¦ï¼š " + maxLen);  
     }  
 		
 	public static void main(String[] args)
