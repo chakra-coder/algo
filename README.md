@@ -24,3 +24,8 @@ algo
 
     - BiSearch: 二分查找的递归和非递归实现
     - Combine2SortedArray: 合并两个有序数组
+    
++ 数据结构相关：
+
+    - MyPriorityQueue: 用两个stack实现的优先队列
+    - MyStack: 用两个queue实现的stack
