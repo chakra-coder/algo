@@ -2,7 +2,7 @@ package sorting;
 
 import java.util.Stack;
 
-import uitl.AlgoUtil;
+import util.AlgoUtil;
 
 /**
  * 典型二分查找

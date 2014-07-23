@@ -1,6 +1,6 @@
 package sorting;
 
-import uitl.AlgoUtil;
+import util.AlgoUtil;
 
 /**
  * 合并两个有序数组

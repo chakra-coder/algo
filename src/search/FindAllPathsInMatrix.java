@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import uitl.AlgoUtil;
+import util.AlgoUtil;
 
 /**
  * 找出从矩阵第一行第一列到最后一行最后一列的所有路径。
