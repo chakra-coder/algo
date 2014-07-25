@@ -37,6 +37,21 @@ public class AlgoUtil
          System.out.println();
     }
     
+    // return greatest common divisor
+    public static int GCD(int a, int b)
+    {
+    		if (a < b)
+    		{
+    			int tmp = a;
+    			a = b;
+    			b = tmp;
+    		}
+    		if (a % b == 0)
+    			return b;
+    		else
+    			return GCD(b, a % b);
+    }
+    
     //return index in tArray for val where tArray[index] is
     //the first element bigger than val in tArray 
     public static int getFirstBiggerIdx(int val, int[] tArray, int sIdx, int eIdx)

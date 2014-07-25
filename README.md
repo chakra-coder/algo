@@ -9,6 +9,7 @@ algo
 + 数字相关
 
     - CombineMaxNumber: 给定数组，输出由数组中数字组成的最大数字
+    - EgyptFraction: ida搜索埃及分数最优解
     
 + 字符串相关
 
