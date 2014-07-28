@@ -38,18 +38,8 @@ public class AlgoUtil
     }
     
     // return greatest common divisor
-    public static int GCD(int a, int b)
-    {
-    		if (a < b)
-    		{
-    			int tmp = a;
-    			a = b;
-    			b = tmp;
-    		}
-    		if (a % b == 0)
-    			return b;
-    		else
-    			return GCD(b, a % b);
+    public static int GCD(int a, int b){
+    	return b != 0 ? GCD(b, a%b):a;  
     }
     
     //return index in tArray for val where tArray[index] is
