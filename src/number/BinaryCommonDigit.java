@@ -81,7 +81,7 @@ public class BinaryCommonDigit {
 	}
 	
 	public static void main(String[] args) {
-		Solution solution = new Solution();
+		BinaryCommonDigit solution = new BinaryCommonDigit();
 		System.out.println(solution.countBitDiff(16807,282475249));
 	}
 }
